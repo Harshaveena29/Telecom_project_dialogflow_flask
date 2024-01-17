@@ -17,5 +17,5 @@ Tools Used : Simple HTML page with bot interface #Google DialogFlow ES (Frontend
 
 ## MySQL
 1. Used MySQL as a backend database
-2. Details about table creation and data are mentioned in the DB folder
+2. Details about table creation and data are mentioned in the DB folder, models
 
