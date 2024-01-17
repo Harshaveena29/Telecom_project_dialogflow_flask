@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan Details</title>
+</head>
+<body>
+	<h1>Mobile Number: {{ data.mobile_number }}</h1>
+    <h2>Plan ID: {{ data.plan_id }} Plan Name: {{ data.plan_name }}</h2>
+    <p><b>Monthly Allowance Data: </b> {{ data.MonthlyAllowanceData }} GB</p>
+    <p><b>Monthly Allowance TalkTime: </b>{{ data.MonthlyAllowanceTalkTime }} calls</p>
+    <p><b>Monthly Allowance Text Messages:</b> {{ data.MonthlyAllowanceTextMessages }} messages</p>
+    <p><b>Data Usage: </b>{{ data.data_usage }} GB</p>
+	<p><b>Calls Usage: </b>{{ data.calls_usage }} calls</p>
+	<p><b>Text Usage: </b>{{ data.text_usage }} messages</p>
+	<p><b>International Roaming: </b>{{ data.international_roaming }} </p>
+    
+</body>
+</html>
