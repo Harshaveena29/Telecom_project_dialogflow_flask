@@ -5,7 +5,7 @@ from models import MobileNumbers, MobilePlans,MobileUsage
 from flask import render_template
 import os
 
-output_file_path = r'C:/Users/veena/Downloads/plandetails/'
+output_file_path = r'C:/Users/veena/Job and Studies/MMKTelecom/templates/'
 
 def extract_session_id(session_str: str):
     match = re.search(r"/sessions/(.*?)/contexts/", session_str)
