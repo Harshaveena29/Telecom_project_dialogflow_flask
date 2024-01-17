@@ -9,13 +9,13 @@ Tools Used : Simple HTML page with bot interface #Google DialogFlow ES (Frontend
 
 ## DialogFlow
 1. I utilized Google's Dialogflow ES to construct and train the chatbot tailored to my specific use case.
-2. Mentioned my training intents, text responses and Entities in chatbot assets folder for reference
+2. Mentioned my training intents, text responses and Entities in chatbot assets file for reference
 
 ## Flask
 1. Used Python Flask to develop the backend API, serving as a webhook fulfillment for the frontend chatbot.
-2. Related code files specific to api development are mentioned in the api folder
+2. Related code files specific to api development are mentioned in the main folder
 
 ## MySQL
 1. Used MySQL as a backend database
-2. Details about table creation and data are mentioned in the DB folder
+2. Details about table creation and data are mentioned in the DB folder, models
 
