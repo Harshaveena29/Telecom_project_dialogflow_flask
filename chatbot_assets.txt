@@ -1,0 +1,101 @@
+Intent: Default Welcome Intent
+Training Phrases: Default Phrases
+Text Responses:
+1. Good day! How can I be of service? Would you like to make changes to your plan or get information on your current plan?
+2. Hi! What can I do for you? Are you thinking about changing your plan, or checking your current plan details?
+3. Hello, How can I help you? You can say "Plan Change" or "Current Plan Details"
+
+Intent: Plan.Change
+Training Phrases: 
+1. plan update
+2. Want plan updates
+3. I would like to do Plan update
+4. How can I upgrade or modify my existing plan?
+5. Can you guide me through the process of changing my plan?
+6. Is it possible to change my current plan? If so, how can I proceed with a plan change?
+7. I'm interested in switching my plan. How can I go about a plan change?
+8. Add Plan
+9. Plan Change
+Text Responses:
+1. Of course! I'm here to assist you with your Plan Change. Please choose a plan from the provided list: 1911 Essential Connect, 1912 Talk & Text Plus, 1913 Family Share Plan, 1914 Smart Saver, 1915 Connected Kids, 1916 Timeless Talk, 1917 Student Starter.
+2. Absolutely! I'm ready to help you through the Plan Change process. Select a plan from the list, which includes options like 1911 Essential Connect, 1912 Talk & Text Plus, 1913 Family Share Plan, 1914 Smart Saver, 1915 Connected Kids, 1916 Timeless Talk, 1917 Student Starter.
+3. Certainly! Your Plan Change is my priority. Pick a plan from the list - options include 1911 Essential Connect, 1912 Talk & Text Plus, 1913 Family Share Plan, 1914 Smart Saver, 1915 Connected Kids, 1916 Timeless Talk, 1917 Student Starter.
+
+Intent: PlanChange.MobileNumber context:ongoing-planchange
+webhook: Enabled
+Training Phrases:
+1. To this mobile number 123-123-1234
+2. +1 1236789002
+3. 123-456-7890
+4. 1234567890
+5. My Mobile number is 3456789012.
+6. This is the mobile number +1 123-456-7890 i want my plan change applied to.
+Text Responses:
+No Default Responses, Response from backend api webhook.
+
+Intent: PlanChange.MobileNumber context:ongoing-planchange - yes
+Followup intent to PlanChange.MobileNumber context:ongoing-planchange
+webhook: Enabled
+Training Phrases:
+1.Yes, that sounds good.
+2.Absolutely, proceed with the plan update.
+3.Certainly, please update the plan.
+4.Sure, go ahead with the update.
+5.Yes, I want to proceed.
+6.yes
+7.okay I will
+Text Responses:
+No Default Response,  Response from backend api webhook.
+
+Intent: PlanChange.MobileNumber context:ongoing-planchange - no
+Followup intent to PlanChange.MobileNumber context:ongoing-planchange 
+webhook: Enabled
+Training Phrases:
+1.I prefer to keep my current plan
+2.No, I'm happy with the current plan.
+3.Not at the moment, thanks.
+4.I'll pass on the plan update for now.
+5.No, I don't want to proceed.
+6.thanks but no
+7.no way
+Text Responses:
+No Default Response,  Response from backend api webhook.
+
+Intent: Complete_transaction
+webhook: Enabled
+Training Phrases:
+1.i am good
+2.No
+3.nothing
+4.thats it
+5.no i am good
+Text Responses:
+No Default Response,  Response from backend api webhook.
+
+
+Intent: Plan.Details
+webhook: Enabled
+Training Phrases:
+1.view plan details
+2.please show plan details
+3.yes view current plan details
+4.Yes, I also want to view plan details
+5.Additionally i want to view my plan details
+6.I'm looking for details regarding my present mobile plan.
+7.Can you provide information on the features of my current plan?
+8.I want to know the details of the plan I'm currently on.
+9.Can you provide information about my current plan details?
+10.plan details
+Text Responses:
+No Default Response,  Response from backend api webhook.
+
+Intent: PlanDetails.MobileNumber context:ongoing-plandetails-extraction
+Followup intent to Plan.Details 
+Training Phrases:
+1.9998887766
+2.My Mobile number is 3456789012.
+3.This is the mobile number +1 123-456-7890 i want to know Plan details about.
+4.+1 1236789002
+5.123-456-7890
+Text Responses:
+No Default Response,  Response from backend api webhook.
