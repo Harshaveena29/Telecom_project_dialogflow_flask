@@ -12,7 +12,6 @@ def extract_session_id(session_str: str):
     if match:
         extracted_string = match.group(1)
         return extracted_string
-
     return ""
 
 def generate_customer_id():

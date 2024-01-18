@@ -1,19 +1,19 @@
 import os
 from flask import Flask
 from db import db
-from routes import webhook  # Import the 'webhook' route from the 'routes' module
+from routes import webhook 
+from dotenv import load_dotenv
 
-app = Flask(__name__)
+def create_app(db_url=None):
+    app = Flask(__name__)
+    load_dotenv()
+    app.config['SQLALCHEMY_DATABASE_URI'] = db_url or os.getenv("DATABASE_URL") 
+    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-print(os.getenv("DATABASE_URL"))
-app.config['SQLALCHEMY_DATABASE_URI'] = f'mysql+pymysql://root:{os.getenv("DATABASE_PSWD")}@localhost/mmktelecom' 
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+    # Initialize the database
+    db.init_app(app)
 
-# Initialize the database
-db.init_app(app)
+    # Register your routes
+    app.register_blueprint(webhook)
 
-# Register your routes
-app.register_blueprint(webhook)
-
-if __name__ == '__main__':
-    app.run()
+    return(app)
